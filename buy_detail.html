@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DC24 - 장바구니</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #F9F9F9;
+    }
+    header {
+      background-color: #FFE9C2;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .nav-links a {
+      margin-left: 15px;
+      text-decoration: none;
+      color: #333;
+    }
+    .container {
+      display: flex;
+      padding: 30px;
+      box-sizing: border-box;
+    }
+    .cart-items {
+      flex: 3;
+      margin-right: 20px;
+    }
+    .cart-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .cart-header input[type="checkbox"] {
+      margin-right: 10px;
+    }
+    .cart-item {
+      background: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 0 5px rgba(0,0,0,0.05);
+    }
+    .cart-item input[type="checkbox"] {
+      margin-right: 10px;
+    }
+    .cart-item img {
+      width: 80px;
+      height: 80px;
+      margin-right: 20px;
+      border-radius: 4px;
+    }
+    .item-details {
+      flex: 1;
+    }
+    .item-title {
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+    .item-price {
+      color: #E74C3C;
+      font-weight: bold;
+    }
+    .quantity-control {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+    }
+    .quantity-control button {
+      width: 30px;
+      height: 30px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .quantity-control input {
+      width: 40px;
+      text-align: center;
+      margin: 0 5px;
+    }
+    .item-actions {
+      text-align: right;
+    }
+    .summary-box {
+      flex: 1;
+      position: sticky;
+      top: 30px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      height: fit-content;
+    }
+    .summary-box h3 {
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+    .summary-box .price-line {
+      display: flex;
+      justify-content: space-between;
+      margin: 5px 0;
+    }
+    .summary-box .total {
+      font-size: 20px;
+      font-weight: bold;
+      text-align: right;
+      margin-top: 15px;
+    }
+    .summary-box button {
+      width: 100%;
+      padding: 12px;
+      background-color: #3D7FFF;
+      color: white;
+      border: none;
+      font-weight: bold;
+      font-size: 16px;
+      border-radius: 4px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+    .coupon-box {
+      background-color: #fff;
+      padding: 15px 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.05);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">DC24</div>
+    <div class="nav-links">
+      <a href="main.html">홈</a>
+      <a href="mypage_main.html">마이페이지</a>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="cart-items">
+      <div class="cart-header">
+        <input type="checkbox" id="selectAll" checked>
+        <label for="selectAll">전체 선택</label>
+      </div>
+
+      <div class="cart-item">
+        <input type="checkbox" checked>
+        <img src="./img/dog_food1.jpg" alt="상품이미지">
+        <div class="item-details">
+          <div class="item-title">인디고 바이오뉴트리션 2kg</div>
+          <div class="item-price">43,000원</div>
+          <div class="quantity-control">
+            <button>-</button>
+            <input type="text" value="1">
+            <button>+</button>
+          </div>
+        </div>
+        <div class="item-actions">
+          <button>삭제</button>
+        </div>
+      </div>
+
+      <div class="cart-item">
+        <input type="checkbox" checked>
+        <img src="./img/dog_food2.jpg" alt="상품이미지">
+        <div class="item-details">
+          <div class="item-title">탐사 6free 강아지 사료 연어 레시피</div>
+          <div class="item-price">30,990원</div>
+          <div class="quantity-control">
+            <button>-</button>
+            <input type="text" value="1">
+            <button>+</button>
+          </div>
+        </div>
+        <div class="item-actions">
+          <button>삭제</button>
+        </div>
+      </div>
+
+      <div class="cart-item">
+        <input type="checkbox" checked>
+        <img src="./img/dog_food3.jpg" alt="상품이미지">
+        <div class="item-details">
+          <div class="item-title">잘먹잘싸 전연령 강아지 건식사료</div>
+          <div class="item-price">44,500원</div>
+          <div class="quantity-control">
+            <button>-</button>
+            <input type="text" value="1">
+            <button>+</button>
+          </div>
+        </div>
+        <div class="item-actions">
+          <button>삭제</button>
+        </div>
+      </div>
+
+      <div class="coupon-box">
+        <h4>할인쿠폰 적용</h4>
+        <label><input type="radio" name="coupon" checked> 14,000원 할인쿠폰 적용</label><br>
+        <label><input type="radio" name="coupon"> 할인쿠폰 적용 안함</label>
+      </div>
+    </div>
+
+    <div class="summary-box">
+      <h3>주문 예상 금액</h3>
+      <div class="price-line"><span>총 상품 가격</span><span>118,490원</span></div>
+      <div class="price-line"><span>총 할인</span><span style="color: red;">-14,000원</span></div>
+      <div class="price-line"><span>총 배송비</span><span>+0원</span></div>
+      <div class="total">104,490원</div>
+      <button onclick="location.href='buy_pay.html'">구매하기 (3)</button>
+    </div>
+  </div>
+</body>
+</html>

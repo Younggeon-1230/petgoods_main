@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DC24 - 주문내역</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #F9F9F9;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header {
+      background-color: #FFE9C2;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .nav-links a {
+      margin-left: 15px;
+      text-decoration: none;
+      color: #333;
+    }
+    .container {
+      display: flex;
+      flex: 1;
+    }
+    .sidebar {
+      width: 200px;
+      background-color: #f1f1f1;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .sidebar h3 {
+      margin-top: 0;
+    }
+    .sidebar a {
+      display: block;
+      margin: 8px 0;
+      color: #333;
+      text-decoration: none;
+    }
+    .content {
+      flex: 1;
+      padding: 30px;
+    }
+    .order-box {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    .order-date {
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+    .order-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid #eee;
+      padding: 15px 0;
+    }
+    .order-item:first-child {
+      border-top: none;
+    }
+    .item-info {
+      display: flex;
+      align-items: center;
+    }
+    .item-info img {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      margin-right: 15px;
+      border-radius: 6px;
+    }
+    .item-title {
+      font-weight: bold;
+    }
+    .item-detail {
+      font-size: 14px;
+      color: #666;
+    }
+    .item-actions button {
+      margin-left: 10px;
+      padding: 6px 10px;
+      background: white;
+      border: 1px solid #aaa;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .item-actions button:hover {
+      background: #f4f4f4;
+    }
+    footer {
+      width: 100%;
+      height: 150px;
+      background-color: #FDF6EC;
+    }
+    #footer_box {
+      width: 1140px;
+      height: 150px;
+      margin: 0 auto;
+    }
+    #footer_logo {
+      float: left;
+      margin: 50px 0 0 30px;
+    }
+    #address {
+      float: right;
+      margin: 50px 30px 0 0;
+      color: #333;
+      list-style: none;
+      padding: 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">DC24</div>
+    <div class="nav-links">
+      <a href="main.html">홈</a>
+      <a href="mypage_main.html">마이페이지</a>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="sidebar">
+      <h3>MY 쇼핑</h3>
+      <a href="#">주문목록/배송조회</a>
+      <a href="#">취소/반품/교환</a>
+      <a href="#">정기배송 관리</a>
+      <a href="#">리뷰 관리</a>
+      <a href="#">문의 내역</a>
+    </div>
+
+    <div class="content">
+      <div class="order-box">
+        <div class="order-date">2025. 6. 27 주문</div>
+        <div class="order-item">
+          <div class="item-info">
+            <img src="./img/dog_food1.jpg" alt="상품 이미지">
+            <div>
+              <div class="item-title">인디고 바이오뉴트리션 2kg</div>
+              <div class="item-detail">43,000원 · 수량 1개</div>
+            </div>
+          </div>
+          <div class="item-actions">
+            <button>배송조회</button>
+            <button>교환/반품</button>
+            <button>리뷰작성</button>
+          </div>
+        </div>
+
+        <div class="order-item">
+          <div class="item-info">
+            <img src="./img/dog_food2.jpg" alt="상품 이미지">
+            <div>
+              <div class="item-title">탐사 6free 강아지 사료 연어 레시피</div>
+              <div class="item-detail">30,990원 · 수량 1개</div>
+            </div>
+          </div>
+          <div class="item-actions">
+            <button>배송조회</button>
+            <button>교환/반품</button>
+            <button>리뷰작성</button>
+          </div>
+        </div>
+
+         <div class="order-item">
+          <div class="item-info">
+            <img src="./img/dog_food3.jpg" alt="상품 이미지">
+            <div>
+              <div class="item-title">잘먹잘싸 전연령 강아지 건식사료</div>
+              <div class="item-detail">44,500원 · 수량 1개</div>
+            </div>
+          </div>
+          <div class="item-actions">
+            <button>배송조회</button>
+            <button>교환/반품</button>
+            <button>리뷰작성</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div id="footer_box">
+      <div id="footer_logo">
+        <img src="./img/footer_logo.png" alt="DC24 로고">
+      </div>
+      <ul id="address">
+        <li>경기도 시흥시</li>
+        <li>TEL: 031-123-1234</li>
+        <li>E-Mail: DC24help@dc24.com</li>
+        <li>COPYRIGHT (C) DC24 All Rights Reserved.</li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DC24 - 회원정보 수정</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #FFF8F0;
+    }
+    header {
+      background-color: #FFE9C2;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .nav {
+      font-size: 16px;
+    }
+     nav a {
+      margin-left: 15px;
+      text-decoration: none;
+      color: #333;
+    }
+    main {
+      padding: 40px 20px;
+      display: flex;
+      justify-content: center;
+    }
+    .info-box {
+      background-color: white;
+      width: 800px;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    }
+    .info-box h2 {
+      margin-bottom: 30px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 10px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    td {
+      padding: 15px 10px;
+      vertical-align: middle;
+    }
+    td:first-child {
+      font-weight: bold;
+      background-color: #F4F4F4;
+      width: 180px;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 300px;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .btn {
+      padding: 8px 16px;
+      background-color: #FFA552;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+    .change-password {
+      margin-top: 30px;
+    }
+    .change-password table {
+      width: auto;
+    }
+    .change-password input[type="submit"] {
+      margin-top: 15px;
+      background-color: #3D7FFF;
+      width: 200px;
+      font-weight: bold;
+    }
+    .link-button {
+      display: block;
+      margin: 20px auto 0 auto;
+      padding: 10px 20px;
+      background-color: #FFA552;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 4px;
+      text-align: center;
+      width: fit-content;
+    }
+    footer {
+      width: 100%;
+      height: 150px;
+      background-color: #FDF6EC;
+      margin-top: 50px;
+    }
+    #footer_box {
+      width: 1140px;
+      height: 150px;
+      margin: 0 auto;
+    }
+    #footer_logo {
+      float: left;
+      margin: 50px 0 0 30px;
+    }
+    #address {
+      float: right;
+      margin: 50px 30px 0 0;
+      color: #333;
+      list-style: none;
+      padding: 0;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="logo">DC24</div>
+  <nav>
+    <a href="main.html">홈</a>
+    <a href="buy_detail.html">장바구니</a>
+  </nav>
+</header>
+
+<main>
+  <div class="info-box">
+    <h2>회원정보 수정</h2>
+    <table>
+      <tr>
+        <td>이메일</td>
+        <td>dc24@dc24.com <button class="btn">이메일 변경</button></td>
+      </tr>
+      <tr>
+        <td>이름</td>
+        <td>이춘봉 <button class="btn">이름 변경</button></td>
+      </tr>
+      <tr>
+        <td>휴대폰 번호</td>
+        <td>010-1234-5678 <button class="btn">번호 변경</button></td>
+      </tr>
+      <tr>
+        <td>반려동물 이름</td>
+        <td>춘식 <button class="btn">이름 변경</button></td>
+      </tr>
+    </table>
+
+    <div class="change-password">
+      <h3>비밀번호 변경</h3>
+      <table>
+        <tr>
+          <td>현재 비밀번호</td>
+          <td><input type="password" placeholder="현재 비밀번호"></td>
+        </tr>
+        <tr>
+          <td>새 비밀번호</td>
+          <td><input type="password" placeholder="새 비밀번호"></td>
+        </tr>
+        <tr>
+          <td>비밀번호 다시 입력</td>
+          <td><input type="password" placeholder="비밀번호 다시 입력"></td>
+        </tr>
+      </table>
+      <input type="submit" class="btn" value="비밀번호 변경">
+      <a href="mypage_main.html" class="link-button">마이페이지로 이동</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div id="footer_box">
+    <div id="footer_logo">
+      <img src="./img/footer_logo.png" alt="DC24 로고">
+    </div>
+    <ul id="address">
+      <li>경기도 시흥시</li>
+      <li>TEL: 031-123-1234</li>
+      <li>E-Mail: DC24help@dc24.com</li>
+      <li>COPYRIGHT (C) DC24 All Rights Reserved.</li>
+    </ul>
+  </div>
+</footer>
+</body>
+</html>

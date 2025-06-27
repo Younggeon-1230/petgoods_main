@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DC24 - 마이페이지</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #FFF8F0;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      background-color: #FFE9C2;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    nav a {
+      margin-left: 15px;
+      text-decoration: none;
+      color: #333;
+    }
+    .container {
+      display: flex;
+      flex: 1;
+    }
+    .sidebar {
+      width: 220px;
+      background-color: #f1f1f1;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .sidebar h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+    .sidebar h4 {
+      margin: 15px 0 5px;
+      font-size: 15px;
+      color: #555;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding-left: 10px;
+      margin: 0;
+    }
+    .sidebar ul li {
+      margin: 6px 0;
+    }
+    .sidebar ul li a {
+      color: #333;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    .content {
+      flex: 1;
+      padding: 30px;
+    }
+    .mypage-box {
+      background-color: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 500px;
+      margin: 0 auto;
+    }
+    .mypage-box h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .mypage-box table {
+      width: 100%;
+      border-spacing: 15px 10px;
+    }
+    .mypage-box td {
+      vertical-align: middle;
+    }
+    .mypage-box label {
+      font-weight: bold;
+      white-space: nowrap;
+    }
+    .value {
+      color: #555;
+    }
+    .button-box {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .button-box a {
+      display: inline-block;
+      margin: 0 10px;
+      padding: 10px 20px;
+      background-color: #FFA552;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 4px;
+    }
+    footer {
+      width: 100%;
+      height: 150px;
+      background-color: #FDF6EC;
+    }
+    #footer_box {
+      width: 1140px;
+      height: 150px;
+      margin: 0 auto;
+    }
+    #footer_logo {
+      float: left;
+      margin: 50px 0 0 30px;
+    }
+    #address {
+      float: right;
+      margin: 50px 30px 0 0;
+      color: #333;
+      list-style: none;
+      padding: 0;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="logo">DC24</div>
+  <nav>
+    <a href="main.html">홈</a>
+    <a href="buy_detail.html">장바구니</a>
+  </nav>
+</header>
+
+<div class="container">
+  <div class="sidebar">
+    <h3>마이페이지 메뉴</h3>
+    <h4>My 주문</h4>
+    <ul>
+      <li><a href="mypage_history.html">주문목록/배송조회</a></li>
+      <li><a href="#">취소/반품/교환</a></li>
+      <li><a href="#">정기배송관리</a></li>
+      <li><a href="#">문의내역</a></li>
+    </ul>
+    <h4>My 정보</h4>
+    <ul>
+      <li><a href="mypage_modify.html">개인정보 수정</a></li>
+      <li><a href="mypage_withdraw.html">회원 탈퇴</a></li>
+    </ul>
+  </div>
+
+  <div class="content">
+    <div class="mypage-box">
+      <h2>마이페이지</h2>
+      <table>
+        <tr>
+          <td><label>아이디</label></td>
+          <td class="value">dc24user</td>
+        </tr>
+        <tr>
+          <td><label>이름</label></td>
+          <td class="value">이춘봉</td>
+        </tr>
+        <tr>
+          <td><label>등급</label></td>
+          <td class="value">일반회원</td>
+        </tr>
+        <tr>
+          <td><label>이메일</label></td>
+          <td class="value">dc24@dc24.com</td>
+        </tr>
+        <tr>
+          <td><label>반려동물 이름</label></td>
+          <td class="value">춘식</td>
+        </tr>
+      </table>
+
+      <div class="button-box">
+        <a href="mypage_history.html">주문 내역 보기</a>
+        <a href="mypage_modify.html">개인정보 수정</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div id="footer_box">
+    <div id="footer_logo">
+      <img src="./img/footer_logo.png" alt="DC24 로고">
+    </div>
+    <ul id="address">
+      <li>경기도 시흥시</li>
+      <li>TEL: 031-123-1234</li>
+      <li>E-Mail: DC24help@dc24.com</li>
+      <li>COPYRIGHT (C) DC24 All Rights Reserved.</li>
+    </ul>
+  </div>
+</footer>
+</body>
+</html>
